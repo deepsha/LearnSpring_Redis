@@ -25,6 +25,7 @@ public class ProductDAO {
     }
 
     public Product findProductById(int id){
+    	System.out.println("calling findProductById:"+id);
         return (Product) template.opsForHash().get(HASH_KEY,id);
     }
 
@@ -33,5 +34,11 @@ public class ProductDAO {
          template.opsForHash().delete(HASH_KEY,id);
         return "product removed !!";
     }
+
+	
+	public String updateProduct(Product product) {
+		template.opsForHash().put(HASH_KEY,product.getId(),product);
+		return "product is updated";
+	}
 
 }
