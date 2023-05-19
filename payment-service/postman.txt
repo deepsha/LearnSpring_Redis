@@ -1,0 +1,11 @@
+curl --location 'http://localhost:8088/publish' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic OjY5NjhlNTQyLTU3MGUtNDI2YS1iMjQyLTcxZjIwY2Y5MzM5Yg==' \
+--data '{
+        "id": 106,
+        "name": "Ricecooker",
+        "quantity": "29",
+         "price": "20"
+        
+
+}'
